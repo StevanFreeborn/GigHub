@@ -9,7 +9,7 @@ namespace GigHub.Models
         public DbSet<Genre> Genres { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Somee", throwIfV1Schema: false)
         {
         }
 
