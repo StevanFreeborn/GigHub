@@ -179,11 +179,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,8 +217,25 @@
     <Compile Include="Migrations\202112210514203_AddAttendance.designer.cs">
       <DependentUpon>202112210514203_AddAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112282158268_InitiateFollowingModel.cs" />
+    <Compile Include="Migrations\202112282158268_InitiateFollowingModel.designer.cs">
+      <DependentUpon>202112282158268_InitiateFollowingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112282202043_AddFollowing.cs" />
+    <Compile Include="Migrations\202112282202043_AddFollowing.designer.cs">
+      <DependentUpon>202112282202043_AddFollowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112282218469_UpdateFollowing.cs" />
+    <Compile Include="Migrations\202112282218469_UpdateFollowing.designer.cs">
+      <DependentUpon>202112282218469_UpdateFollowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112282239181_CorrectFollowingModel.cs" />
+    <Compile Include="Migrations\202112282239181_CorrectFollowingModel.designer.cs">
+      <DependentUpon>202112282239181_CorrectFollowingModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\FactorViewModel.cs" />
@@ -304,6 +323,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Following\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -339,6 +359,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112210514203_AddAttendance.resx">
       <DependentUpon>202112210514203_AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112282158268_InitiateFollowingModel.resx">
+      <DependentUpon>202112282158268_InitiateFollowingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112282202043_AddFollowing.resx">
+      <DependentUpon>202112282202043_AddFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112282218469_UpdateFollowing.resx">
+      <DependentUpon>202112282218469_UpdateFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112282239181_CorrectFollowingModel.resx">
+      <DependentUpon>202112282239181_CorrectFollowingModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
