@@ -24,7 +24,7 @@ namespace GigHub.Controllers
 
             if (exists)
             {
-                return BadRequest("You are already following this Artist.");
+                return BadRequest("User already follows the Artist.");
             }
 
             var following = new Following

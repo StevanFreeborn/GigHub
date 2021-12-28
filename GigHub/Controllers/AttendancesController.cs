@@ -24,7 +24,7 @@ namespace GigHub.Controllers
             
             if(exists)
             {
-                return BadRequest("You are already going to this Gig.");
+                return BadRequest("User is already attending the Gig.");
             }
 
             var attendance = new Attendance

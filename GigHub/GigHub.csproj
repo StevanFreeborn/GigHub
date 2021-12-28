@@ -180,6 +180,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
@@ -232,6 +233,10 @@
     <Compile Include="Migrations\202112282239181_CorrectFollowingModel.cs" />
     <Compile Include="Migrations\202112282239181_CorrectFollowingModel.designer.cs">
       <DependentUpon>202112282239181_CorrectFollowingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112282249395_UpdateApplicationUserModel.cs" />
+    <Compile Include="Migrations\202112282249395_UpdateApplicationUserModel.designer.cs">
+      <DependentUpon>202112282249395_UpdateApplicationUserModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -371,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112282239181_CorrectFollowingModel.resx">
       <DependentUpon>202112282239181_CorrectFollowingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112282249395_UpdateApplicationUserModel.resx">
+      <DependentUpon>202112282249395_UpdateApplicationUserModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
