@@ -142,10 +142,8 @@ h6,
     color: white;
     text-align: center;
     width: 60px;
-    border-radius: 12px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    border-radius: 4px 4px;
+
 }
 
 .gigs > li .date .month {
@@ -153,14 +151,19 @@ h6,
     font-size: 14px;
     font-weight: bold;
     padding: 2px 6px;
+    border: solid;
+    border-color: black;
+    border-bottom: none;
+    border-width: 3px;
 }
 
 .gigs > li .date .day {
-    background: #f7f7f7;
-    color: #333;
+    background: white;
+    color: black;
     font-size: 20px;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
 }
 
 .gigs > li .details {
