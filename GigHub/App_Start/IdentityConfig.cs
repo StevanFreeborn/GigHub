@@ -11,6 +11,10 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using GigHub.Models;
+using System.Net;
+using SendGrid.Helpers.Mail;
+using System.Configuration;
+using SendGrid;
 
 namespace GigHub
 {
@@ -18,8 +22,20 @@ namespace GigHub
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            return configSendGridasync(message);
+        }
+
+        private async Task configSendGridasync(IdentityMessage message)
+        {
+            var apiKey = ConfigurationManager.AppSettings["sendGridApiKey"];
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("stevan@freeborntrainingsystems.com", "GigHub");
+            var to = new EmailAddress(message.Destination);
+            var subject = message.Subject;
+            var plainTextContent = message.Body;
+            var htmlContent = message.Body;
+            var myMessage = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(myMessage);
         }
     }
 
