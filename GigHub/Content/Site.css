@@ -126,6 +126,10 @@ h6,
     border-radius: 9px;
 }
 
+.modal-title {
+    font-size: 24px;
+}
+
 /* Page-Level Styles */
 
 .followees {

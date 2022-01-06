@@ -186,8 +186,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GigsController.cs" />
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Migrations\202201060434442_AddIsCanceledToGig.cs" />
+    <Compile Include="Migrations\202201060434442_AddIsCanceledToGig.designer.cs">
+      <DependentUpon>202201060434442_AddIsCanceledToGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
@@ -285,6 +290,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112282249395_UpdateApplicationUserModel.resx">
       <DependentUpon>202112282249395_UpdateApplicationUserModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201060434442_AddIsCanceledToGig.resx">
+      <DependentUpon>202201060434442_AddIsCanceledToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
