@@ -27,8 +27,8 @@ namespace GigHub.Controllers
                 g.DateTime > DateTime.Now && 
                 g.IsCanceled == false)
                 .Include(g => g.Genre)
-                .ToList()
-                .OrderBy(g => g.DateTime);
+                .OrderBy(g => g.DateTime)
+                .ToList();
 
             return View(gigs);
         }
@@ -42,8 +42,8 @@ namespace GigHub.Controllers
                 .Select(a => a.Gig)
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
-                .ToList()
-                .OrderBy(g => g.DateTime);
+                .OrderBy(g => g.DateTime)
+                .ToList();
 
             var viewModel = new GigsViewModel
             {
