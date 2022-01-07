@@ -121,8 +121,8 @@ h6,
 }
 
 .btn {
-    font-size: 17px;
-    padding: 7px 20px;
+    font-size: 14px;
+    padding: 7px 7px;
     border-radius: 9px;
 }
 
@@ -196,4 +196,8 @@ h6,
 
 .gigs > li:hover .actions {
     display: block;
+}
+
+.gigs > li .going-button {
+    margin-top:10px;
 }
