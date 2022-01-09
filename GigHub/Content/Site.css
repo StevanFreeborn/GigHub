@@ -84,6 +84,18 @@ span.field-validation-error {
     font-weight: 700;
 }
 
+.navbar-inverse .notifications {
+    position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    background: black;
+    color: white;
+}
+
 body{
     font-size: 17px;
 }
