@@ -191,12 +191,14 @@ h6 {
 }
 
 .gigs {
+    padding-left: 0;
     list-style: none;
 }
 
     .gigs > li {
         position: relative;
         margin: 30px;
+        margin-left: 0;
     }
 
         .gigs > li .date {
@@ -276,3 +278,7 @@ h6 {
     .popover-notifications ul.notifications .highlight {
         font-weight: bold;
     }
+
+#searchGigs {
+    width: 300px;
+}
