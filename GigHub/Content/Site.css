@@ -1,215 +1,224 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 17px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
-    white-space: normal;
+  white-space: normal;
 }
-
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+input {
+  max-width: 280px;
+}
+select {
+  max-width: 280px;
+}
 textarea {
-    max-width: 280px;
+  max-width: 280px;
 }
-
 span.field-validation-error {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
-
 .voffset {
-    margin-top: 2px;
+  margin-top: 2px;
 }
-
 .voffset1 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-
 .voffset2 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
 .voffset3 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
 .voffset4 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-
 .voffset5 {
-    margin-top: 80px;
+  margin-top: 80px;
 }
-
 /* Bootstrap Overrides */
+.popover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
 .navbar-inverse {
-    background-color: #ff4342;
-    border-color: #ff4342;
+  background-color: #ff4342;
+  border-color: #ff4342;
 }
-
 .navbar-inverse .navbar-nav > li > a {
-    color: #fff;
+  color: #fff;
 }
-
-.navbar-inverse .navbar-brand {
-    color: #fff;
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: rgba(205, 40, 39, 0.55);
 }
-
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: rgba(205, 40, 39, 0.55);
+.navbar-inverse .navbar-nav > .open > a:hover {
+  background-color: rgba(205, 40, 39, 0.55);
 }
-
-.dropdown-menu {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: rgba(205, 40, 39, 0.55);
 }
-
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
-
-.navbar-brand {
-    font-weight: 700;
+.navbar-inverse .navbar-brand {
+  color: #fff;
 }
-
 .navbar-inverse .notifications {
-    position: relative;
+  position: relative;
 }
-
 .navbar-inverse .notifications .badge {
-    position: absolute;
-    top: 5px;
-    right: 3px;
-    background: black;
-    color: white;
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  background: black;
+  color: white;
 }
-
-body{
-    font-size: 17px;
+.dropdown-menu {
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
+.navbar-brand {
+  font-weight: 700;
+}
+h1 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h3 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h4 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h5 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h6 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h1 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h2 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h3 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h4 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h5 {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .h6 {
-    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 .form-control {
-    font-size: 17px;
-    height: 40px;
-    border-radius: 9px;
+  font-size: 17px;
+  height: 40px;
+  border-radius: 9px;
 }
-
 .form-control:focus {
-    border-color: #2196f3;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+  border-color: #2196f3;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
-
 .btn {
-    font-size: 14px;
-    padding: 7px 7px;
-    border-radius: 9px;
+  font-size: 14px;
+  padding: 7px 7px;
+  border-radius: 9px;
 }
-
 .modal-title {
-    font-size: 24px;
+  font-size: 24px;
 }
-
 /* Page-Level Styles */
-
 .followees {
-    list-style: circle;
+  list-style: none;
+  padding-left: 0;
 }
-
 .gigs {
-    list-style: none;
+  list-style: none;
 }
-
 .gigs > li {
-    position: relative;
-    margin: 30px;
+  position: relative;
+  margin: 30px;
 }
-
 .gigs > li .date {
-    background: #ff4342;
-    color: white;
-    text-align: center;
-    width: 60px;
-    border-radius: 4px 4px;
-
+  background: #ff4342;
+  color: white;
+  text-align: center;
+  width: 60px;
+  border-radius: 4px 4px;
 }
-
 .gigs > li .date .month {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 2px 6px;
-    border: solid;
-    border-color: black;
-    border-bottom: none;
-    border-width: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: solid;
+  border-color: black;
+  border-bottom: none;
+  border-width: 3px;
 }
-
 .gigs > li .date .day {
-    background: white;
-    color: black;
-    font-size: 20px;
-    border: solid;
-    border-color: black;
-    border-width: 3px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  border: solid;
+  border-color: black;
+  border-width: 3px;
 }
-
 .gigs > li .details {
-    position: absolute;
-    top: 0;
-    left: 70px;
+  position: absolute;
+  top: 0;
+  left: 70px;
 }
-
 .gigs > li .details .artist {
-    font-weight: bold;
-    display: block;
+  font-weight: bold;
+  display: block;
 }
-
 .gigs > li .details .genre {
-    font-size: 15px;
+  font-size: 15px;
 }
-
 .gigs > li .actions {
-    font-size: 15px;
-    display: none;
+  font-size: 15px;
+  display: none;
 }
-
 .gigs > li:hover .actions {
-    display: block;
+  display: block;
 }
-
 .gigs > li .going-button {
-    margin-top:10px;
+  margin-top: 10px;
+}
+.popover-notifications .popover-content {
+  padding: 0;
+}
+.popover-notifications ul.notifications {
+  list-style: none;
+  padding-left: 0;
+}
+.popover-notifications ul.notifications > li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.popover-notifications ul.notifications > li:last-child {
+  border-bottom: none;
+}
+.popover-notifications ul.notifications .highlight {
+  font-weight: bold;
 }

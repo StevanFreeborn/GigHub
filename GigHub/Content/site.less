@@ -1,0 +1,315 @@
+﻿@color_1: red;
+@color_2: #fff;
+@color_3: white;
+@color_4: black;
+@font_family_1: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@background_color_1: #ff4342;
+@background_color_2: rgba(205, 40, 39, 0.55);
+@border_color_1: #ff4342;
+@border_color_2: #2196f3;
+@border_color_3: black;
+@border_top_color_1: #fff;
+@border_bottom_color_1: #fff;
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-family: @font_family_1;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal {
+    dt {
+        white-space: normal;
+    }
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+input {
+    max-width: 280px;
+}
+
+select {
+    max-width: 280px;
+}
+
+textarea {
+    max-width: 280px;
+}
+
+span.field-validation-error {
+    color: @color_1;
+    font-weight: bold;
+}
+
+.voffset {
+    margin-top: 2px;
+}
+
+.voffset1 {
+    margin-top: 5px;
+}
+
+.voffset2 {
+    margin-top: 10px;
+}
+
+.voffset3 {
+    margin-top: 20px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.voffset5 {
+    margin-top: 80px;
+}
+
+/* Bootstrap Overrides */
+
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-inverse {
+    background-color: @background_color_1;
+    border-color: @border_color_1;
+
+    .navbar-nav {
+        > li {
+            > a {
+                color: @color_2;
+            }
+        }
+
+        > .open {
+            > a {
+                background-color: @background_color_2;
+
+                &:hover {
+                    background-color: @background_color_2;
+                }
+
+                &:focus {
+                    background-color: @background_color_2;
+                }
+            }
+        }
+
+        > .dropdown {
+            > a {
+                .caret {
+                    border-top-color: @border_top_color_1;
+                    border-bottom-color: @border_bottom_color_1;
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        color: @color_2;
+    }
+
+    .notifications {
+        position: relative;
+
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 3px;
+            background: black;
+            color: @color_3;
+        }
+    }
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+h1 {
+    font-family: @font_family_1;
+}
+
+h2 {
+    font-family: @font_family_1;
+}
+
+h3 {
+    font-family: @font_family_1;
+}
+
+h4 {
+    font-family: @font_family_1;
+}
+
+h5 {
+    font-family: @font_family_1;
+}
+
+h6 {
+    font-family: @font_family_1;
+}
+
+.h1 {
+    font-family: @font_family_1;
+}
+
+.h2 {
+    font-family: @font_family_1;
+}
+
+.h3 {
+    font-family: @font_family_1;
+}
+
+.h4 {
+    font-family: @font_family_1;
+}
+
+.h5 {
+    font-family: @font_family_1;
+}
+
+.h6 {
+    font-family: @font_family_1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    height: 40px;
+    border-radius: 9px;
+
+    &:focus {
+        border-color: @border_color_2;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+.btn {
+    font-size: 14px;
+    padding: 7px 7px;
+    border-radius: 9px;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+/* Page-Level Styles */
+
+.followees {
+    list-style: none;
+    padding-left: 0;
+}
+
+.gigs {
+    list-style: none;
+
+    > li {
+        position: relative;
+        margin: 30px;
+
+        .date {
+            background: #ff4342;
+            color: @color_3;
+            text-align: center;
+            width: 60px;
+            border-radius: 4px 4px;
+
+            .month {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 2px 6px;
+                border: solid;
+                border-color: @border_color_3;
+                border-bottom: none;
+                border-width: 3px;
+            }
+
+            .day {
+                background: white;
+                color: @color_4;
+                font-size: 20px;
+                border: solid;
+                border-color: @border_color_3;
+                border-width: 3px;
+            }
+        }
+
+        .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+
+            .artist {
+                font-weight: bold;
+                display: block;
+            }
+
+            .genre {
+                font-size: 15px;
+            }
+        }
+
+        .actions {
+            font-size: 15px;
+            display: none;
+        }
+
+        &:hover {
+            .actions {
+                display: block;
+            }
+        }
+
+        .going-button {
+            margin-top: 10px;
+        }
+    }
+}
+
+.popover-notifications {
+    .popover-content {
+        padding: 0;
+    }
+
+    ul.notifications {
+        list-style: none;
+        padding-left: 0;
+
+        > li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+    }
+}
