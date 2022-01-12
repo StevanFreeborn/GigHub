@@ -207,8 +207,8 @@ h6 {
 }
 
 .btn {
-    font-size: 14px;
-    padding: 7px 7px;
+    font-size: 12px;
+    padding: 4px 4px;
     border-radius: 9px;
 }
 
@@ -236,18 +236,20 @@ h6 {
             background: #ff4342;
             color: @color_3;
             text-align: center;
-            width: 60px;
+            width: 80px;
             border-radius: 4px 4px;
+            height: 80px;
 
             .month {
                 text-transform: uppercase;
                 font-size: 14px;
                 font-weight: bold;
-                padding: 2px 6px;
+                padding: 6px 6px;
                 border: solid;
                 border-color: @border_color_3;
                 border-bottom: none;
                 border-width: 3px;
+                height: 35px;
             }
 
             .day {
@@ -257,13 +259,15 @@ h6 {
                 border: solid;
                 border-color: @border_color_3;
                 border-width: 3px;
+                height: 45px;
+                padding: 6px;
             }
         }
 
         .details {
             position: absolute;
             top: 0;
-            left: 70px;
+            left: 90px;
 
             .artist {
                 font-weight: bold;
@@ -272,6 +276,8 @@ h6 {
 
             .genre {
                 font-size: 15px;
+                display: block;
+                margin-bottom: 4px;
             }
         }
 
@@ -284,12 +290,6 @@ h6 {
             .actions {
                 display: block;
             }
-        }
-
-        .going-button {
-            position: relative;
-            left: 275px;
-            bottom: 50px;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace GigHub
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/scripts/app/services/attendanceService.js",
                 "~/scripts/app/services/followingsService.js",
-                "~/scripts/app/controllers/followeesController.js",
+                "~/scripts/app/controllers/gigsDetailsController.js",
                 "~/scripts/app/controllers/gigsController.js",
                 "~/scripts/app.js"
             ));

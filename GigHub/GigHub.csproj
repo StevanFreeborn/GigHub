@@ -319,7 +319,7 @@
     </None>
     <None Include="Content\site.less" />
     <Content Include="Scripts\app\app.js" />
-    <Content Include="Scripts\app\controllers\followeesController.js" />
+    <Content Include="Scripts\app\controllers\gigsDetailsController.js" />
     <Content Include="Scripts\app\controllers\gigsController.js" />
     <Content Include="Scripts\app\services\attendanceService.js" />
     <Content Include="Scripts\app\services\followingsService.js" />

@@ -1,23 +1,23 @@
-﻿var FolloweesController = function (followingsService) {
+﻿var GigsDetailsController = function (followingsService) {
 
-    var button;
+    var followButton;
 
     var fail = function () {
         alert("Something failed!");
     }
 
     var done = function () {
-        var text = (button.text() === "Following") ? "Follow" : "Following";
+        var text = (followButton.text().trim() === "Follow") ? "Following" : "Follow";
 
-        button.toggleClass("btn-info").toggleClass("btn-default").text(text);
+        followButton.toggleClass("btn-info").toggleClass("btn-default").text(text);
     }
 
     var toggleFollow = function (e) {
-        button = $(e.target);
+        followButton = $(e.target);
 
-        var followeeId = button.attr("data-user-id");
+        var followeeId = followButton.attr("data-user-id");
 
-        if (button.hasClass("btn-default")) {
+        if (followButton.hasClass("btn-default")) {
             followingsService.createFollowing(followeeId, done, fail);
         } else {
             followingsService.deleteFollowing(followeeId, done, fail);

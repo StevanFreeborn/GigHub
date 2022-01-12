@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="details">
-                <div class="artist">
+                <span class="artist">
                     <a href="@Url.Action("GetDetails", "Gigs", new {id = gig.Id})">
                         @gig.Artist.Name
                     </a>
@@ -39,18 +39,10 @@
                     {
                         <span class="label label-warning">Canceled</span>
                     }
-
-                    @if (Model.ShowActions)
-                    {
-                        <button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-follow">Follow</button>
-                    }
-                </div>
-                <div class="genre">
+                </span>
+                <span class="genre">
                     @gig.Genre.Name
-                </div>
-            </div>
-
-            <div class="going-button">
+                </span>
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
                     <button data-gig-id="@gig.Id"

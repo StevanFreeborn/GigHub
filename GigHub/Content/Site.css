@@ -139,8 +139,8 @@ h6 {
   -webkit-box-shadow: none;
 }
 .btn {
-  font-size: 14px;
-  padding: 7px 7px;
+  font-size: 12px;
+  padding: 4px 4px;
   border-radius: 9px;
 }
 .modal-title {
@@ -164,18 +164,20 @@ h6 {
   background: #ff4342;
   color: white;
   text-align: center;
-  width: 60px;
+  width: 80px;
   border-radius: 4px 4px;
+  height: 80px;
 }
 .gigs > li .date .month {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
-  padding: 2px 6px;
+  padding: 6px 6px;
   border: solid;
   border-color: black;
   border-bottom: none;
   border-width: 3px;
+  height: 35px;
 }
 .gigs > li .date .day {
   background: white;
@@ -184,11 +186,13 @@ h6 {
   border: solid;
   border-color: black;
   border-width: 3px;
+  height: 45px;
+  padding: 6px;
 }
 .gigs > li .details {
   position: absolute;
   top: 0;
-  left: 70px;
+  left: 90px;
 }
 .gigs > li .details .artist {
   font-weight: bold;
@@ -196,6 +200,8 @@ h6 {
 }
 .gigs > li .details .genre {
   font-size: 15px;
+  display: block;
+  margin-bottom: 4px;
 }
 .gigs > li .actions {
   font-size: 15px;
@@ -203,11 +209,6 @@ h6 {
 }
 .gigs > li:hover .actions {
   display: block;
-}
-.gigs > li .going-button {
-  position: relative;
-  left: 275px;
-  bottom: 50px;
 }
 .popover-notifications .popover-content {
   padding: 0;

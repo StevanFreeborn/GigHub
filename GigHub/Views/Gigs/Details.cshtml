@@ -1,4 +1,6 @@
-﻿@model GigHub.ViewModels.GigDetailsViewModel
+﻿@using System.Diagnostics
+@using Microsoft.AspNet.Identity
+@model GigHub.ViewModels.GigDetailsViewModel
 @{
     ViewBag.Title = "Details";
 }
@@ -16,6 +18,7 @@
             @(Model.IsFollowing ? "Following" : "Follow")
         </button>
     }
+
 </h3>
 <p>
     Performing at @Model.Gig.Venue on @Model.Gig.DateTime.ToString("M/d/yyyy") at @Model.Gig.DateTime.ToString("h:mm tt").
@@ -30,7 +33,7 @@
 {
     <script>
         $(document).ready(function () {
-            FolloweesController.init("#followee");
+            GigsDetailsController.init("#followee");
         });
     </script>
 }

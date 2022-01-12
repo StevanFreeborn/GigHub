@@ -7,7 +7,7 @@
     }
 
     var done = function () {
-        var text = (button.text() === "Attending") ? "Attend" : "Attending";
+        var text = (button.text().trim() === "Attending") ? "Attend" : "Attending";
 
         button.toggleClass("btn-info").toggleClass("btn-default").text(text);
     }
