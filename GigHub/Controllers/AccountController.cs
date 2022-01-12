@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using GigHub.Core.Models;
+using GigHub.Core.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using GigHub.Models;
-using GigHub.ViewModels;
 
 namespace GigHub.Controllers
 {
@@ -29,6 +30,7 @@ namespace GigHub.Controllers
             SignInManager = signInManager;
         }
 
+        [SuppressMessage("ReSharper", "ArrangeAccessorOwnerBody")]
         public ApplicationSignInManager SignInManager
         {
             get
@@ -41,6 +43,7 @@ namespace GigHub.Controllers
             }
         }
 
+        [SuppressMessage("ReSharper", "ArrangeAccessorOwnerBody")]
         public ApplicationUserManager UserManager
         {
             get

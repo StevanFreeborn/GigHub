@@ -10,10 +10,11 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using GigHub.Models;
 using System.Net;
 using SendGrid.Helpers.Mail;
 using System.Configuration;
+using GigHub.Core.Models;
+using GigHub.Persistence;
 using SendGrid;
 
 namespace GigHub
