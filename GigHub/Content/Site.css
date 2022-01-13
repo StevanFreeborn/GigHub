@@ -144,14 +144,39 @@ h6 {
   -webkit-box-shadow: none;
 }
 .btn {
-  font-size: 12px;
-  padding: 4px 4px;
+  font-size: 17px;
+  padding: 7px 20px;
   border-radius: 9px;
 }
 .modal-title {
   font-size: 24px;
 }
 /* Page-Level Styles */
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  margin-left: 0px;
+}
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 15px;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+.attend-button {
+  font-size: 12px;
+  padding: 4px 4px;
+  border-radius: 9px;
+}
+.follow-button {
+  font-size: 12px;
+  padding: 4px 4px;
+  border-radius: 9px;
+}
 .followees {
   list-style: none;
   padding-left: 0;
