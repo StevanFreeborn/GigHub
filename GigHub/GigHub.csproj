@@ -229,6 +229,13 @@
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Controllers\Api\FollowingsController.cs" />
     <Compile Include="Core\Dtos\UserDto.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ApplicationUserConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\AttendanceConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\FollowingConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\GigConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\NotificationConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\UserNotificationConfiguration.cs" />
     <Compile Include="Persistence\Migrations\202201060434442_AddIsCanceledToGig.cs" />
     <Compile Include="Persistence\Migrations\202201060434442_AddIsCanceledToGig.designer.cs">
       <DependentUpon>202201060434442_AddIsCanceledToGig.cs</DependentUpon>
@@ -238,7 +245,7 @@
       <DependentUpon>202201072159244_AddNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Models\Notification.cs" />
-    <Compile Include="Core\Models\NotificationType.cs" />
+    <Compile Include="Core\Enums\NotificationType.cs" />
     <Compile Include="Core\Models\UserNotification.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Repositories\IUserNotificationRepository.cs" />
@@ -364,8 +371,10 @@
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\gigsDetailsController.js" />
     <Content Include="Scripts\app\controllers\gigsController.js" />
+    <Content Include="Scripts\app\controllers\notificationController.js" />
     <Content Include="Scripts\app\services\attendanceService.js" />
     <Content Include="Scripts\app\services\followingsService.js" />
+    <Content Include="Scripts\app\services\notificationService.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

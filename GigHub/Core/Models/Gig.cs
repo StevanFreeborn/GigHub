@@ -14,18 +14,14 @@ namespace GigHub.Core.Models
 
         public ApplicationUser Artist { get; set; }
 
-        [Required]
         public string ArtistId { get; set; }
         
         public DateTime DateTime { get; set; }
 
-        [Required]
-        [StringLength(255)]
         public string Venue { get; set; }
 
         public Genre Genre { get; set; }
 
-        [Required]
         public byte GenreId { get; set; }
 
         public ICollection<Attendance> Attendances { get; private set; }
@@ -55,11 +51,17 @@ namespace GigHub.Core.Models
             DateTime = dateTime;
             GenreId = genre;
 
-            foreach(var attendee in Attendances.Select(a => a.Attendee))
+            var attendees = GetAttendees();
+
+            foreach(var attendee in attendees)
             {
                 attendee.Notify(notification);
             }
 
+        }
+        public IList<ApplicationUser> GetAttendees()
+        {
+            return Attendances.Select(a => a.Attendee).ToList();
         }
     }
 }

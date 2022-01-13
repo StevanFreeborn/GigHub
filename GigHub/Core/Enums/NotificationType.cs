@@ -1,4 +1,4 @@
-﻿namespace GigHub.Core.Models
+﻿namespace GigHub.Core.Enums
 {
     public enum NotificationType
     {
