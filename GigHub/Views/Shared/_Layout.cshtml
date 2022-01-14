@@ -26,8 +26,6 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Add a Gig", "Create", "Gigs")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -36,21 +34,25 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - GigHub</p>
+        <hr/>
+        <footer style="text-align: left">
+            @Html.ActionLink("About", "About", "Home")
+            |
+            @Html.ActionLink("Contact", "Contact", "Home")
+            |
+            <span>&copy; @DateTime.Now.Year - GigHub</span>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/lib")
     @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
-    <script type="text/x-template" id="notifications-template">
+<script type="text/x-template" id="notifications-template">
         <ul class="notifications">
             <%
             _.each(notifications, function(notification){
                 if(notification.type == 1){ %>
-                    <li><span class="highlight"><%= notification.gig.artist.name %></span> has canceled the gig at <span class="highlight"><%= notification.gig.venue %></span> at <span class="highlight"><%= moment(notification.gig.dateTime).format("M/d/yyyy h:mm A") %></span>.</li>
+                    <li><span class="highlight"><%= notification.gig.artist.name %></span> has canceled a gig at <span class="highlight"><%= notification.gig.venue %></span> at <span class="highlight"><%= moment(notification.gig.dateTime).format("M/d/yyyy h:mm A") %></span>.</li>
                 <% }
                 
                 else if(notification.type == 2){
@@ -71,6 +73,10 @@
                     }
                 %>
                     <li><span class="highlight"><%= notification.gig.artist.name %></span> has changed the <span class="highlight"><%= changes.join(' and ')%></span> of the gig from <span class="highlight"><%= originalValues.join('/') %></span> to <span class="highlight"><%= newValues.join('/') %></span>.</li>
+                <%
+                }
+                else{ %>
+                    <li><span class="highlight"><%= notification.gig.artist.name %></span> has added a gig at <span class="highlight"><%= notification.gig.venue %></span> at <span class="highlight"><%= moment(notification.gig.dateTime).format("M/d/yyyy h:mm A") %></span>.</li>
                 <%
                 }
             })
