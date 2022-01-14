@@ -37,5 +37,7 @@ namespace GigHub.Core.Models
             var userNotification = new UserNotification(this, notification);
             UserNotifications.Add(userNotification);
         }
+
+
     }
 }

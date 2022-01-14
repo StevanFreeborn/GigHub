@@ -20,6 +20,20 @@ namespace GigHub.Persistence.Repositories
         public void Add(Gig gig)
         {
             _context.Gigs.Add(gig);
+
+            var artistId = gig.ArtistId;
+
+            var followers = _context.Followings
+                .Where(f => f.FolloweeId == artistId)
+                .Select(f => f.Follower)
+                .ToList();
+
+            var notification = Notification.GigCreated(gig);
+
+            foreach(var follower in followers)
+            {
+                follower.Notify(notification);
+            }
         }
 
         public Gig GetGigById(int gigId)

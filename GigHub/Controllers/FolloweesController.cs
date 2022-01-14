@@ -15,7 +15,7 @@ namespace GigHub.Controllers
 
         public ActionResult Followees()
         {
-            var followees = _unitOfWork.Followings.GetFollowings(User.Identity.GetUserId());
+            var followees = _unitOfWork.Followings.GetFollowees(User.Identity.GetUserId());
 
             return View(followees);
         }

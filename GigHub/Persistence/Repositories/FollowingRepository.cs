@@ -14,11 +14,19 @@ namespace GigHub.Persistence.Repositories
             _context = context;
         }
 
-        public IEnumerable<ApplicationUser> GetFollowings(string userId)
+        public IEnumerable<ApplicationUser> GetFollowees(string userId)
         {
             return _context.Followings
                 .Where(f => f.FollowerId == userId)
                 .Select(f => f.Followee)
+                .ToList();
+        }
+
+        public IEnumerable<ApplicationUser> GetFollowers(string artistId)
+        {
+            return _context.Followings
+                .Where(f => f.FolloweeId == artistId)
+                .Select(f => f.Follower)
                 .ToList();
         }
 
