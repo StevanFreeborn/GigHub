@@ -26,7 +26,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Add a Gig", "Create", "Gigs")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="@Url.Action("Create", "Gigs")">Add a Gig</a></li>
+                        <li><a href="@Url.Action("Mine", "Gigs")">My Upcoming Gigs</a></li>
+                        <li><a href="@Url.Action("Attending", "Gigs")">Gigs I'm Attending</a></li>
+                        <li><a href="@Url.Action("Followees", "Followees")">Artists I'm Following</a></li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
