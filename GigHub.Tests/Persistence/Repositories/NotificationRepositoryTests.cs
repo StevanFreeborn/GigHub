@@ -44,5 +44,39 @@ namespace GigHub.Tests.Persistence.Repositories
             notifications.Should().HaveCount(1);
             notifications.First().Should().Be(notification);
         }
+
+        [TestMethod]
+        public void GetUnreadNotifications_NotificationIsRead_ShouldNotBeReturned()
+        {
+            var gig = new Gig();
+            var notification = Notification.GigCanceled(gig);
+            var user = new ApplicationUser { Id = "1" };
+
+            var userNotification = new UserNotification(user, notification);
+
+            userNotification.Read();
+
+            _mockNotifications.SetSource(new[] { userNotification });
+
+            var notifications = _repository.GetUnreadNotifications(user.Id);
+
+            notifications.Should().BeEmpty();
+        }
+
+        [TestMethod]
+        public void GetUnreadNotifications_NotificationIsForADifferentUser_ShouldNotBeReturned()
+        {
+            var gig = new Gig();
+            var notification = Notification.GigCanceled(gig);
+            var user = new ApplicationUser { Id = "1" };
+
+            var userNotification = new UserNotification(user, notification);
+
+            _mockNotifications.SetSource(new[] { userNotification });
+
+            var notifications = _repository.GetUnreadNotifications(user.Id + "-");
+
+            notifications.Should().BeEmpty();
+        }
     }
 }
