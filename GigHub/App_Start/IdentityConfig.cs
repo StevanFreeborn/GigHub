@@ -13,9 +13,14 @@ using Microsoft.Owin.Security;
 using System.Net;
 using SendGrid.Helpers.Mail;
 using System.Configuration;
+using System.Diagnostics;
 using GigHub.Core.Models;
 using GigHub.Persistence;
 using SendGrid;
+using Twilio;
+using Twilio.Clients;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace GigHub
 {
@@ -44,7 +49,17 @@ namespace GigHub
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your SMS service here to send a text message.
+            var accountSid = "AC75bf59dd4995a0129a09caf71b0e450c";
+            var authToken = "95d4b5c9619ac31e4d1a4c6fefebec6c";
+            
+            TwilioClient.Init(accountSid, authToken);
+
+            var smsMessage = MessageResource.Create(
+                body: message.Body,
+                from: new PhoneNumber("+19378872940"),
+                to: new PhoneNumber(message.Destination)
+            );
+
             return Task.FromResult(0);
         }
     }
