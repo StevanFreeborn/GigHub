@@ -1,4 +1,5 @@
-﻿using GigHub.Core;
+﻿using System.Configuration;
+using GigHub.Core;
 using GigHub.Core.Repositories;
 using GigHub.Persistence.Repositories;
 
@@ -16,6 +17,7 @@ namespace GigHub.Persistence
             Followings = new FollowingRepository(_context);
             Attendances = new AttendanceRepository(_context);
             UserNotifications = new UserNotificationRepository(_context);
+            Notifications = new NotificationRepository(_context);
         }
 
         public IGigRepository Gigs { get; }
@@ -23,6 +25,7 @@ namespace GigHub.Persistence
         public IFollowingRepository Followings { get; }
         public IAttendanceRepository Attendances { get; }
         public IUserNotificationRepository UserNotifications { get; }
+        public INotificationRepository Notifications { get; }
 
         public void Complete()
         {

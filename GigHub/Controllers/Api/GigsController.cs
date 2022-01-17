@@ -17,7 +17,7 @@ namespace GigHub.Controllers.Api
         [HttpDelete]
         public IHttpActionResult Cancel(int id)
         {
-            var gig = _unitOfWork.Gigs.GetGigById(id);
+            var gig = _unitOfWork.Gigs.GetGigWithAttendees(id);
 
             if (gig == null || gig.IsCanceled) return NotFound();
 

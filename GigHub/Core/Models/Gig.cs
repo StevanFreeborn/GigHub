@@ -37,7 +37,9 @@ namespace GigHub.Core.Models
 
             var notification = Notification.GigCanceled(this);
 
-            foreach (var attendee in Attendances.Select(a => a.Attendee))
+            var attendees = GetAttendees();
+
+            foreach (var attendee in attendees)
             {
                 attendee.Notify(notification);
             }
@@ -59,7 +61,7 @@ namespace GigHub.Core.Models
             }
 
         }
-        public IList<ApplicationUser> GetAttendees()
+        public ICollection<ApplicationUser> GetAttendees()
         {
             return Attendances.Select(a => a.Attendee).ToList();
         }

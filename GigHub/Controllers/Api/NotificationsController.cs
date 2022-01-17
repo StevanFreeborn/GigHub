@@ -23,7 +23,7 @@ namespace GigHub.Controllers.Api
         {
             var userId = User.Identity.GetUserId();
 
-            var notifications = _unitOfWork.UserNotifications.GetUnreadNotifications(userId);
+            var notifications = _unitOfWork.Notifications.GetUnreadNotifications(userId);
 
             return notifications.Select(Mapper.Map<Notification, NotificationDto>);
         }
