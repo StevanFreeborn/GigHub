@@ -35,7 +35,7 @@ namespace GigHub
         {
             var apiKey = ConfigurationManager.AppSettings["sendGridApiKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("stevan@freeborntrainingsystems.com", "GigHub");
+            var from = new EmailAddress(ConfigurationManager.AppSettings["sendGridEmail"], "GigHub");
             var to = new EmailAddress(message.Destination);
             var subject = message.Subject;
             var plainTextContent = message.Body;
@@ -49,14 +49,14 @@ namespace GigHub
     {
         public Task SendAsync(IdentityMessage message)
         {
-            var accountSid = "AC75bf59dd4995a0129a09caf71b0e450c";
-            var authToken = "95d4b5c9619ac31e4d1a4c6fefebec6c";
+            var accountSid = ConfigurationManager.AppSettings["twilioAccountSid"];
+            var authToken = ConfigurationManager.AppSettings["twilioAccountAuth"];
             
             TwilioClient.Init(accountSid, authToken);
 
             var smsMessage = MessageResource.Create(
                 body: message.Body,
-                from: new PhoneNumber("+19378872940"),
+                from: new PhoneNumber(ConfigurationManager.AppSettings["twilioPhoneNumber"]),
                 to: new PhoneNumber(message.Destination)
             );
 
