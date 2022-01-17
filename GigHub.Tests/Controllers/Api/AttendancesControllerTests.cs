@@ -7,7 +7,7 @@ using GigHub.Core;
 using GigHub.Core.Dtos;
 using GigHub.Core.Models;
 using GigHub.Core.Repositories;
-using GigHub.Tests.Controllers.Extensions;
+using GigHub.Tests.Extensions;
 using Moq;
 
 namespace GigHub.Tests.Controllers.Api

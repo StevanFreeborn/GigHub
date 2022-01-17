@@ -8,7 +8,7 @@ using GigHub.Controllers.Api;
 using GigHub.Core;
 using GigHub.Core.Models;
 using GigHub.Core.Repositories;
-using GigHub.Tests.Controllers.Extensions;
+using GigHub.Tests.Extensions;
 using Moq;
 
 namespace GigHub.Tests.Controllers.Api
@@ -59,7 +59,7 @@ namespace GigHub.Tests.Controllers.Api
         {
             var gig = new Gig{ArtistId = _userId + "-"};
 
-            _mockRepository.Setup(r => r.GetGigById(1)).Returns(gig);
+            _mockRepository.Setup(r => r.GetGigWithAttendees(1)).Returns(gig);
 
             var result = _controller.Cancel(1);
 
@@ -71,7 +71,7 @@ namespace GigHub.Tests.Controllers.Api
         {
             var gig = new Gig { ArtistId = _userId };
 
-            _mockRepository.Setup(r => r.GetGigById(1)).Returns(gig);
+            _mockRepository.Setup(r => r.GetGigWithAttendees(1)).Returns(gig);
 
             var result = _controller.Cancel(1);
 
