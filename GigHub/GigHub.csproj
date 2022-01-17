@@ -381,6 +381,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="ConnectionStrings.config" />
     <None Include="Content\site.less" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\gigsDetailsController.js" />
@@ -444,6 +445,7 @@
     <Content Include="Views\Followees\Followees.cshtml" />
     <Content Include="Views\Gigs\Mine.cshtml" />
     <Content Include="Views\Gigs\Details.cshtml" />
+    <Content Include="Secrets.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
