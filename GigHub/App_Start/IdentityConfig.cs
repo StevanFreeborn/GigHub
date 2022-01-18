@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using System.Net;
 using SendGrid.Helpers.Mail;
 using System.Configuration;
-using System.Diagnostics;
 using GigHub.Core.Models;
 using GigHub.Persistence;
 using SendGrid;
 using Twilio;
-using Twilio.Clients;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 

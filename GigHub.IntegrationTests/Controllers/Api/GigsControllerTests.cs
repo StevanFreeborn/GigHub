@@ -1,10 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Linq;
 using FluentAssertions;
 using GigHub.Controllers.Api;
 using GigHub.Core.Models;
-using GigHub.Core.ViewModels;
 using GigHub.IntegrationTests.Extensions;
 using GigHub.Persistence;
 using NUnit.Framework;

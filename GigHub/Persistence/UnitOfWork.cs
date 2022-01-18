@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using GigHub.Core;
+﻿using GigHub.Core;
 using GigHub.Core.Repositories;
 using GigHub.Persistence.Repositories;
 

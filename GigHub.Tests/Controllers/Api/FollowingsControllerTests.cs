@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Web.Http.Results;
 using FluentAssertions;
 using GigHub.Controllers.Api;

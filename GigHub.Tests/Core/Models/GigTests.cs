@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using FluentAssertions;
 using GigHub.Core.Models;
-using GigHub.Persistence.EntityConfigurations;
 
 namespace GigHub.Tests.Core.Models
 {

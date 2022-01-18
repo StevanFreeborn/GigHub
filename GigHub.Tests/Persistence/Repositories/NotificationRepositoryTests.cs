@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Data.Entity;
 using System.Linq;
 using FluentAssertions;

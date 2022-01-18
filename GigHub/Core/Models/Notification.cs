@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using GigHub.Core.Enums;
 
 namespace GigHub.Core.Models

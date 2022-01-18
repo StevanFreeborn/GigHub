@@ -1,6 +1,5 @@
 ﻿using System;
 using GigHub.Core.Enums;
-using GigHub.Core.Models;
 
 namespace GigHub.Core.Dtos
 {
